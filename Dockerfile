@@ -1,4 +1,4 @@
 FROM openjdk:latest
-COPY ./target/classes/com /tmp/com
+COPY ./target/populatio-0.1.2-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.napier.sem.main"]
+ENTRYPOINT ["java", "-jar", "populatio-0.1.2-jar-with-dependencies.jar"]
