@@ -1,0 +1,11 @@
+Product Backlog
+
+Story	                                                                        Task priority
+As a User,  I want to be able to access a specific population report	           5
+As a User, I want to be able to understand the User Interface quickly 	         3
+As a User, I want to be able to select reports inherent to a specific
+continent, region, country, district, city or capital city	                     8
+As a User, I want to be able to look for specific reports by providing
+information to the program	                                                     7
+As a User, I want to be able to see the percentage of world
+ population speaking a language (Chinese, English, Hindi, Spanish, Arabic)	     6
