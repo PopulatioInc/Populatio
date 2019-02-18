@@ -17,7 +17,7 @@ public class City {
                             + "WHERE ID = " + ID;
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
-            // Return new employee if valid.
+            // Return new city if valid.
             // Check one is returned
             if (rset.next()) {
                 City c = new City();

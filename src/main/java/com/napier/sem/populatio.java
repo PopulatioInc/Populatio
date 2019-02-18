@@ -7,7 +7,7 @@ public class populatio {
     /**
      * Connection to MySQL database.
      */
-    private static Connection con = null;
+    private Connection con = null;
 
     /**
      * Connect to the MySQL database.
@@ -61,7 +61,7 @@ public class populatio {
         a.connect();
 
         City c = null;
-        c = c.getCity(25, con);
+        c = c.getCity(25, a.con);
         c.displayCity(c);
 
         // Disconnect from database
