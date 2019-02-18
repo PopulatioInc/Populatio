@@ -60,7 +60,7 @@ public class populatio {
         // Connect to database
         a.connect();
 
-        City c = null;
+        City c = new City();
         c = c.getCity(25, a.con);
         c.displayCity(c);
 

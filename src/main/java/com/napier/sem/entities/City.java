@@ -13,7 +13,7 @@ public class City {
             // Create string for SQL statement
             String strSelect =
                     "SELECT ID, Name, CountryCode, District, Population "
-                            + "FROM world "
+                            + "FROM city "
                             + "WHERE ID = " + ID;
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
