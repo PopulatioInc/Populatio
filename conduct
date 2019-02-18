@@ -1,19 +1,16 @@
-Scrum project code of conduct
--	The figure of the Scrum Master will be covered by Alexander Koenig.
--	The figure of the Product Owner will be covered by Celeste Prussiani.
-	Coding standards
--	Git Commits have to be properly described so every member of the team can distinguish each update.
+Scrum Project Code of Conduct
+-	Alexander Koenig will be the Scrum Master.
+-	Celeste Prussiani will be the Product Owner.
 
+Coding standards
+-	Git Commits have to be properly described so every member of the team can distinguish each update.
 -	The project code has to be written in Java (JDK 8). The code must be formatted and each member should strive to reduce redundancy as much as possible.
 	Team meetings and conduct
 -	Weekly face to face meetings will be held from 2pm to 4pm (including class time). Any other communication will be held via Facebook Messenger.
-
 -	Three Daily Stand-Ups  will be held on Wednesday, Friday and Sunday. Communication during these brief meetings will be held via Facebook Messenger,
  as the members of the team might not have a chance to physically meet due to other engagements (work or University related).
-
 -	Every team member must turn up to meetings. Anyone failing to do so will still have to keep up with the other’s work and actively contribute to the Sprint.
 All the other members will ensure each task is still carried out efficiently.
-
 -	If any team member feels like the team is leaving most of the work to them, this has to be reported at any time during a Daily Stand-Up.
 If all the members agree, they will give the team member in question a timeout.
 
