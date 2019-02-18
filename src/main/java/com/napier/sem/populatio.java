@@ -28,7 +28,7 @@ public class populatio {
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false", "root", "brexit");
+                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "brexit");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
