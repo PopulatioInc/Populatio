@@ -1,14 +1,13 @@
 package com.napier.sem;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import com.napier.sem.entities.*;
 
 public class populatio {
     /**
      * Connection to MySQL database.
      */
-    private Connection con = null;
+    private static Connection con = null;
 
     /**
      * Connect to the MySQL database.
@@ -60,6 +59,10 @@ public class populatio {
 
         // Connect to database
         a.connect();
+
+        City c = null;
+        c = c.getCity(25, con);
+        c.displayCity(c);
 
         // Disconnect from database
         a.disconnect();
