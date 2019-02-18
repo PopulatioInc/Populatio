@@ -2,7 +2,7 @@ package com.napier.sem;
 
 import java.sql.*;
 
-public class main
+public class populatio
 {
     public static void main(String[] args)
     {
