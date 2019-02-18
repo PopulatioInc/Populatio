@@ -1,0 +1,59 @@
+@startuml
+actor user as "User"
+
+rectangle Database
+
+rectangle "System" {
+    usecase UC1 as "Navigate Database to display
+    Info about specific
+    country/region/city's population"
+    usecase UC2 as "Generate Reports
+    about specific
+    country/region/city"
+    usecase UC3 as "Enter specific requirements in
+    system interface to only
+    display useful information"
+    usecase UC4 as "Retrieve population of each
+    continen/region/country/district"
+    usecase UC5 as "Find out number of people
+    speaking Chinese, English, Hindu,
+    Spanish or Arabic"
+    usecase UC6 as "Generate population reports
+    based on continent, region
+    or country"
+
+    usecase UCa as "Get Cities"
+    usecase UCb as "Get Countries"
+    usecase UCc as "Get Region Data"
+    usecase UCd as "Get District Data"
+
+    user - UC1
+    user - UC2
+    user - UC3
+    user - UC4
+    user - UC5
+    user - UC6
+
+    UC1 ..> UCa : include
+    UC1 ..> UCb : include
+    UC1 ..> UCc : include
+    UC2 ..> UCa : include
+    UC2 ..> UCb : include
+    UC2 ..> UCc : include
+    UC4 ..> UCa : include
+    UC4 ..> UCb : include
+    UC4 ..> UCc : include
+    UC4 ..> UCd : include
+    UC5 ..> UCb : include
+    UC6 ..> UCa : include
+    UC6 ..> UCb : include
+    UC6 ..> UCc : include
+
+    UC1 - Database
+    UC2 - Database
+    UC3 - Database
+    UC4 - Database
+    UC5 - Database
+    UC6 - Database
+}
+@enduml
