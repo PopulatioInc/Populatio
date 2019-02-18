@@ -9,4 +9,4 @@ COPY world_db/*.sql /tmp/
 # This is specific to MySQL.
 COPY world_db/world.sql /docker-entrypoint-initdb.d
 # Set the root password
-ENV MYSQL_ROOT_PASSWORD brexit
+ENV MYSQL_ROOT_PASSWORD example
