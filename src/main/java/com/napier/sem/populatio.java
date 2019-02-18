@@ -55,14 +55,14 @@ public class populatio {
 
     public static void main(String[] args) {
         // Create new Application
-        populatio a = new populatio();
+        populatio a = new populatio(); //Initialte a new populatio object
 
         // Connect to database
         a.connect();
 
-        City c = new City();
-        c = c.getCity(25, a.con);
-        c.displayCity(c);
+        City c = new City(); //Create new placeholder city
+        c = c.getCity(25, a.con); //Populate placeholder with city based on ID, also pass on MySQL connection to City.java
+        c.displayCity(c); //Display information in console
 
         // Disconnect from database
         a.disconnect();
