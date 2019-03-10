@@ -27,8 +27,9 @@ public class City {
                 c.district = rset.getString("District");
                 c.population = rset.getInt("Population");
                 return c;
-            } else
+            } else {
                 return null;
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get city details");
