@@ -12,9 +12,9 @@ public class Country {
             Statement stmt = con.createStatement(); //Create mySQL statement placeholder
             // Create string for SQL statement
             String strSelect =
-                    "SELECT Code, Name, Continent, Region, Population, Capital " //Statement takes in SQL request
+                    "SELECT country.Code, country.Name, Continent, Region, Population, Capital " //Statement takes in SQL request
                             + "FROM country "
-                            + "WHERE Code = " + code; //currently based on ID provided by getCity
+                            + "WHERE country.Code = '" + code + "'"; //currently based on ID provided by getCity
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect); //Executes the SQL query and saves it to rset
             // Return new city if valid.
@@ -24,7 +24,7 @@ public class Country {
                 c.countrycode = rset.getString("Code"); //Get ID and put into City
                 c.name = rset.getString("Name"); //Get Name and put into City
                 c.continent = rset.getString("Continent"); //and so on.
-                c.capital = rset.getString("Capital");
+                c.capitalCode = rset.getInt("Capital");
                 c.population = rset.getInt("Population");
                 return c;
             } else {
@@ -47,6 +47,6 @@ public class Country {
 
     public int population;
 
-    public String capital;
+    public int capitalCode;
 
 }

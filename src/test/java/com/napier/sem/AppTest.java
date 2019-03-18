@@ -22,8 +22,6 @@ public class AppTest {
         assertEquals(1, c.id);
         assertEquals( "Kabul",c.name);
         assertEquals( "AFG",c.countrycode);
-
-        a.disconnect();
     }
 
     @Test
@@ -32,6 +30,6 @@ public class AppTest {
         c = c.getCountry("GBR", a.con);
         assertEquals("GBR", c.countrycode);
         assertEquals( "United Kingdom",c.name);
-        assertEquals( "London",c.capital);
+        assertEquals( 456,c.capitalCode);
     }
 }
