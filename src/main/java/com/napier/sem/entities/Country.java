@@ -33,7 +33,7 @@ public class Country {
         }
     }
 
-    public HashMap<String,Country> getCountryList(Connection con) {
+    public static HashMap<String,Country> getCountryList(Connection con) {
         HashMap<String,Country> countryList = new HashMap<String,Country>();
         try {
             Statement stmt = con.createStatement();
@@ -56,7 +56,7 @@ public class Country {
         }
     }
 
-    private Country countryFetch(ResultSet rset) throws SQLException {
+    private static Country countryFetch(ResultSet rset) throws SQLException {
         Country c = new Country(); //Create placeholder for City
         c.countrycode = rset.getString("Code"); //Get ID and put into City
         c.name = rset.getString("Name"); //Get Name and put into City

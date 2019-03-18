@@ -9,6 +9,7 @@ public class populatio {
      */
     public Connection con = null;
 
+
     /**
      * Connect to the MySQL database.
      */
@@ -58,12 +59,12 @@ public class populatio {
         populatio a = new populatio(); //Initialte a new populatio object
 
         // Connect to database
-        if (args.length < 1)
-        {
-            a.connect("localhost:3306");
-        }
-        else
-        {
+            if (args.length < 1)
+            {
+                a.connect("localhost:3306");
+            }
+            else
+            {
             a.connect(args[0]);
         }
 

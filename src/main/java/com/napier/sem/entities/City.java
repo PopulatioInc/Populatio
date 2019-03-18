@@ -33,10 +33,10 @@ public class City {
         }
     }
 
-    public HashMap<Integer,City> getCityList(Connection con) {
+    public static HashMap<Integer,City> getCityList(Connection con) {
         HashMap<Integer,City> cityList = new HashMap<Integer, City>();
         try {
-            for (int i = 1; i > 4079; i++) {
+            for (int i = 1; i < 4079; i++) {
                 Statement stmt = con.createStatement();
                 String strSelect =
                         "SELECT ID, Name, CountryCode, District, Population " //Statement takes in SQL request
@@ -58,7 +58,7 @@ public class City {
         }
     }
 
-    private City cityFetch(ResultSet rset) throws SQLException {
+    private static City cityFetch(ResultSet rset) throws SQLException {
         City c = new City(); //Create placeholder for City
         c.id = rset.getInt("ID"); //Get ID and put into City
         c.name = rset.getString("Name"); //Get Name and put into City
