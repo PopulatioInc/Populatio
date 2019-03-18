@@ -18,6 +18,7 @@ public class UnitTest
         a.connect();
     }
 
+    //Test city
     @Test
     void testGetCity()
     {
@@ -31,4 +32,31 @@ public class UnitTest
         assertEquals( "Kabul",c.name);
         assertEquals( "AFG",c.countrycode);
     }
+
+    //Test country
+    @Test
+    void testGetCountry()
+    {
+        populatio a = new populatio();
+        a.connect();
+
+        Country c = new Country();
+        c = c.getCountry(1, a.con);
+        assertEquals(1, c.id);
+        assertEquals( "China",c.name);
+        assertEquals( "CHN",c.countrycode);
+    }
+
+    //Test languages
+    @Test
+    void testGetLang()
+    {
+        populatio a = new populatio();
+        a.connect();
+
+        Country c = new Country();
+        c = c.getLanguage("AUS", a.con);
+        assertEquals("AUS", c.countrycode);
+    }
 }
+
