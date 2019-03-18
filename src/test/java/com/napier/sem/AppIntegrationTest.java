@@ -18,7 +18,7 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testGetEmployee()
+    void testGetCountry()
     {
         City c = new City();
         c = c.getCity(1, a.con);
