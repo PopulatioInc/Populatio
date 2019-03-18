@@ -12,7 +12,7 @@ public class populatio {
     /**
      * Connect to the MySQL database.
      */
-    public void connect() {
+    public void connect(String location) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -28,7 +28,7 @@ public class populatio {
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://localhost:33060/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://" + location + "/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
@@ -58,7 +58,7 @@ public class populatio {
         populatio a = new populatio(); //Initialte a new populatio object
 
         // Connect to database
-        a.connect();
+        a.connect("localhost:33060");
 
         City c = new City(); //Create new placeholder city
         c = c.getCity(25, a.con); //Populate placeholder with city based on ID, also pass on MySQL connection to City.java
