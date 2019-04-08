@@ -51,7 +51,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <finalName>populatio</finalName>
-                    <mainClass>com.napier.sem.App</mainClass>
+                    <mainClass>com.napier.sem.populatio</mainClass>
                 </configuration>
                 <executions>
                     <execution>
