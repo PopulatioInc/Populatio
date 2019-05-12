@@ -30,7 +30,6 @@ public class populatio {
             }
 
 
-        a.query2();
         a.query3();
         a.query4();
         a.query5();
@@ -116,46 +115,7 @@ public class populatio {
         }
     }
 
-    public void query2()
-    {
-        System.out.println("Query2 - All the countries in the world organised by largest population to smallest.\n");
-        try {
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT Name, Population "
-                            + "FROM country "
-                            + "ORDER BY Population DESC";
-
-            // Execute SQL statement
-            ResultSet resultSet = stmt.executeQuery(strSelect);
-
-
-            if (resultSet.next())
-            {
-                Country country = new Country();
-                country.Name = resultSet.getString("Name");
-                country.Population = resultSet.getInt("Population");
-                System.out.println("");
-
-                while(resultSet.next()) {
-                    System.out.println( ", Name- " + resultSet.getString("Name")
-                            + ", Population- " + resultSet.getInt("Population"));
-                }
-                System.out.println("Query2 -finished\n");
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get details");
-
-        }
-
-    }
-
+    
     public void query3()
     {
         System.out.println("Query3 - All the countries in a continent organised by largest population to smallest.\n");
