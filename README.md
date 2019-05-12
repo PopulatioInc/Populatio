@@ -6,7 +6,9 @@
 - Release [![Releases](https://img.shields.io/github/release/populatioinc/populatio/all.svg?style=flat-square)](https://github.com/populatioinc/populatio/releases)
 - CodeCov [![codecov](https://codecov.io/gh/PopulatioInc/Populatio/branch/master/graph/badge.svg)](https://codecov.io/gh/PopulatioInc/Populatio)
 
-20 requirements of 32 have been implemented, which is 62.5%
+20 requirements of 32 have been implemented, which is 62.5%. 
+
+Unfortunately we could not add any screenshots as proof as the dB connection kept failing so we couldn't figure out how to reflect the outputs in time.
 
 | ID | Name | Met | Screenshot |
 | --- | --- | --- | --- |
