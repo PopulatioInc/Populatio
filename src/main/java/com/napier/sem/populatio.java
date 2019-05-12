@@ -115,7 +115,7 @@ public class populatio {
         }
     }
 
-    
+    //SQL queries written
     public void query3()
     {
         System.out.println("Query3 - All the countries in a continent organised by largest population to smallest.\n");
@@ -148,7 +148,7 @@ public class populatio {
                 System.out.println("Query3 -finished\n");
             }
         }
-        catch (Exception e)
+        catch (Exception e) //Catch any errors and print error message
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get details");
@@ -156,7 +156,6 @@ public class populatio {
         }
 
     }
-
 
     public void query4()
     {
@@ -198,7 +197,7 @@ public class populatio {
         }
 
     }
-
+    
     public void query5()
     {
         System.out.println("Query5 - The top N populated countries in the world where N is provided by the user.\n");
