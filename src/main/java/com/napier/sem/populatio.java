@@ -4,7 +4,12 @@ import java.sql.*;
 import com.napier.sem.entities.*;
 import java.util.Scanner;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.concurrent.TimeUnit;
 public class populatio {
+
+
     /**
      * Connection to MySQL database.
      */
@@ -17,12 +22,13 @@ public class populatio {
         // Connect to database
             if (args.length < 1)
             {
-                a.connect("localhost:3306");
+                a.connect("localhost:33060");
             }
             else
             {
             a.connect(args[0]);
             }
+
 
         a.query2();
         a.query3();
@@ -82,7 +88,8 @@ public class populatio {
                 System.out.println("Failed to connect to database attempt " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             }
-            try {
+            try
+            {
                 // Wait a bit for db to start
                 Thread.sleep(30000);
             } catch (InterruptedException ie) {
@@ -91,6 +98,8 @@ public class populatio {
         }
 
     }
+
+
 
     /**
      * Disconnect from the MySQL database.
