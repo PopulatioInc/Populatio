@@ -1,4 +1,4 @@
-package com.napier.sem;
+/**package com.napier.sem;
 
 import com.napier.sem.entities.*;
 import org.junit.jupiter.api.BeforeAll;
@@ -37,4 +37,4 @@ public class AppTest {
         //What happens when we pass null to getCountryList - Since our main doesn't do anything yet, it is not implemented yet
         assertNull(null);
     }
-}
+}*/

@@ -1,81 +1,78 @@
 package com.napier.sem.entities;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.HashMap;
-
 public class Country {
+    /**
+     * Country Code
+     */
+    public String Code;
 
-    public Country getCountry(String code, Connection con) {
-        try {
-            // Create an SQL statement
-            Statement stmt = con.createStatement(); //Create mySQL statement placeholder
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT country.Code, country.Name, Continent, Region, Population, Capital " //Statement takes in SQL request
-                            + "FROM country "
-                            + "WHERE country.Code = '" + code + "'"; //currently based on ID provided by getCity
-            // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(strSelect); //Executes the SQL query and saves it to rset
-            // Return new city if valid.
-            // Check one is returned
-            if (rset.next()) {
-                return countryFetch(rset);
-            } else {
-                return null;
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get city details");
-            return null;
-        }
-    }
+    /**
+     * Country Name
+     */
+    public String Name;
 
-    public static HashMap<String,Country> getCountryList(Connection con) {
-        HashMap<String,Country> countryList = new HashMap<String,Country>();
-        try {
-            Statement stmt = con.createStatement();
-            String strSelect =
-                    "SELECT country.Code, country.Name, Continent, Region, Population, Capital " //Statement takes in SQL request
-                            + "FROM country ";
-            ResultSet rset = stmt.executeQuery(strSelect);
-            while(rset.next()) {
-                int numColumns = rset.getMetaData().getColumnCount();
-                for(int i = 1; i <= numColumns; i++) {
-                    countryList.put(countryFetch(rset).countrycode, countryFetch(rset));
-                }
-            }
-            return countryList;
+    /**
+     * Country Continent
+     */
+    public String  Continent;
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get city details");
-            return null;
-        }
-    }
+    /**
+     * Country Region
+     */
+    public String Region;
 
-    private static Country countryFetch(ResultSet rset) throws SQLException {
-        Country c = new Country(); //Create placeholder for City
-        c.countrycode = rset.getString("Code"); //Get ID and put into City
-        c.name = rset.getString("Name"); //Get Name and put into City
-        c.continent = rset.getString("Continent"); //and so on.
-        c.capitalCode = rset.getInt("Capital");
-        c.population = rset.getInt("Population");
-        return(c);
-    }
+    /**
+     * Country SurfaceArea
+     */
+    public Float SurfaceArea;
 
-    public String countrycode;
+    /**
+     * Country IndepYear
+     */
+    public Integer IndepYear;
 
-    public String name;
+    /**
+     * Country Population
+     */
+    public Integer Population;
 
-    public String continent;
+    /**
+     * Country LifeExpectancy
+     */
+    public Float LifeExpectancy;
 
-    public String region;
+    /**
+     * Country GNP
+     */
+    public Float GNP;
 
-    public int population;
+    /**
+     * Country GNPOld
+     */
+    public Float GNPOld;
 
-    public int capitalCode;
+    /**
+     * Country LocalName
+     */
+    public String LocalName;
 
+    /**
+     * Country GovernmentForm
+     */
+    public String GovernmentForm;
+
+    /**
+     * Country HeadOfState
+     */
+    public String HeadOfState;
+
+    /**
+     * Country Capital
+     */
+    public Integer Capital;
+
+    /**
+     * Country Code2
+     */
+    public String Code2;
 }
