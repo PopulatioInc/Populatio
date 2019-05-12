@@ -4,6 +4,7 @@
 - Development Build Status [![Build Status](https://travis-ci.org/PopulatioInc/Populatio.svg?branch=develop)](https://travis-ci.org/PopulatioInc/Populatio)
 - License [![LICENSE](https://img.shields.io/github/license/populatioinc/populatio.svg?style=flat-square)](https://github.com/populatioinc/populatio/LICENSE)
 - Release [![Releases](https://img.shields.io/github/release/populatioinc/populatio/all.svg?style=flat-square)](https://github.com/populatioinc/populatio/releases)
+- CodeCov [![codecov](https://codecov.io/gh/PopulatioInc/Populatio/branch/master/graph/badge.svg)](https://codecov.io/gh/PopulatioInc/Populatio)
 
 22 requirements of 32 have been implemented, which is 68.75%
 
